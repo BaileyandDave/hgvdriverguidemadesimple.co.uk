@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HGV Driver Guide Made Simple</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #0d2f57;
+    }
+
+    header {
+      background: #07366b;
+      color: white;
+      padding: 18px 30px;
+    }
+
+    .topbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .truck-logo {
+      font-size: 42px;
+    }
+
+    .brand-text h1 {
+      font-size: 28px;
+      line-height: 1;
+      color: white;
+    }
+
+    .brand-text h1 span {
+      display: block;
+      color: #ffd928;
+    }
+
+    .brand-text p {
+      margin-top: 6px;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav ul {
+      max-width: 1200px;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      padding: 15px 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0d2f57;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #e0a900;
+    }
+
+    .hero {
+      min-height: 460px;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4, 41, 82, 0.95) 0%,
+          rgba(4, 41, 82, 0.75) 45%,
+          rgba(4, 41, 82, 0.15) 100%
+        ),
+        url("images/hero-truck.jpg");
+
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      width: 1200px;
+      max-width: calc(100% - 40px);
+      margin: 0 auto;
+      color: white;
+      padding: 50px 0;
+    }
+
+    .hero h2 {
+      font-size: 58px;
+      line-height: 0.95;
+      max-width: 650px;
+      text-transform: uppercase;
+    }
+
+    .hero h2 span {
+      color: #ffd928;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 600px;
+      margin-top: 20px;
+      line-height: 1.4;
+    }
+
+    .hero ul {
+      margin-top: 22px;
+      list-style: none;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero li::before {
+      content: "✓";
+      display: inline-block;
+      margin-right: 10px;
+      color: #7cdf68;
+      font-weight: bold;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 25px;
+      background: #ffd928;
+      color: #0d2f57;
+      padding: 15px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 18px;
+    }
+
+    .hero-button:hover {
+      background: #f1c900;
+    }
+
+    .feature-strip {
+      background: #f3f7fb;
+      border-bottom: 1px solid #dce4ee;
+    }
+
+    .feature-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      padding: 22px 20px;
+      gap: 20px;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: #4b6177;
+    }
+
+    @media (max-width: 800px) {
+      .topbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .hero {
+        min-height: 500px;
+        background-position: 65% center;
+      }
+
+      .hero h2 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .feature-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .brand-text h1 {
+        font-size: 22px;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
+
+      .feature-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="topbar">
+
+      <div class="brand">
+        <div class="truck-logo">🚛</div>
+
+        <div class="brand-text">
+          <h1>
+            HGV DRIVER GUIDE
+            <span>MADE SIMPLE</span>
+          </h1>
+
+          <p>Real Guidance for Real Drivers</p>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Books</a></li>
+      <li><a href="#">Free Resources</a></li>
+      <li><a href="#">Driver Resource Centre</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h2>
+        HGV Knowledge
+        <span>Made Simple</span>
+      </h2>
+
+      <p>
+        Practical guides, clear diagrams and real-world advice
+        for new and existing HGV drivers.
+      </p>
+
+      <ul>
+        <li>Step-by-step explanations</li>
+        <li>Easy to understand diagrams</li>
+        <li>From the basics to the real-world stuff</li>
+      </ul>
+
+      <a href="#" class="hero-button">
+        Explore the Books →
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="feature-strip">
+
+    <div class="feature-inner">
+
+      <div class="feature">
+        <h3>📘 PRACTICAL GUIDES</h3>
+        <p>Written for drivers</p>
+      </div>
+
+      <div class="feature">
+        <h3>⚙️ REAL-WORLD EXPERIENCE</h3>
+        <p>Know what to expect</p>
+      </div>
+
+      <div class="feature">
+        <h3>📋 DIAGRAMS & CHECKLISTS</h3>
+        <p>See it. Do it. Remember it.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🎓 BUILD CONFIDENCE</h3>
+        <p>Drive safer, work smarter</p>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
