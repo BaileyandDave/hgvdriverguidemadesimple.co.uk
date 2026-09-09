@@ -277,7 +277,44 @@ html {
         line-height: 1.55;
         margin-bottom: 16px;
     }
-    }
+      .book-section {
+    background: #f3f7fb;
+}
+
+.book-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.book-inner h2 {
+    color: #07366b;
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.book-inner h2 span {
+    color: #29b6f6;
+}
+
+.book-inner p {
+    max-width: 800px;
+    color: #334e68;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.book-status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background: #07366b;
+    color: white;
+    font-weight: bold;
+}
+    
     .site-footer {
     background: #07366b;
     color: white;
@@ -323,7 +360,7 @@ html {
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#">Books</a></li>
+      <li><a href="#books">Books</a></li>
       <li><a href="#">Free Resources</a></li>
       <li><a href="#">Driver Resource Centre</a></li>
       <li><a href="#about">About</a></li>
@@ -384,8 +421,23 @@ html {
       </div>
 
     </div>
-
   </section>
+<section id="books" class="book-section">
+    <div class="book-inner">
+        <h2>HGV Driving <span>Explained</span></h2>
+
+        <p>
+            A practical guide for new and less experienced HGV drivers, written to bridge the gap between passing the test and learning how to do the job safely and professionally.
+        </p>
+
+        <p>
+            The guide covers vehicle checks, coupling and uncoupling, reversing, load security, tachographs, paperwork, delivery sites, communication, cab life and many other situations drivers face throughout their working week.
+        </p>
+
+        <span class="book-status">Paperback and Kindle editions coming soon</span>
+    </div>
+</section>
+  
 <section id="about" class="about-guide">
     <h2>About <span>HGV Driving Explained</span></h2>
 
