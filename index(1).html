@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HGV Driving Explained is a practical guide for new and less experienced HGV drivers, covering vehicle checks, coupling, reversing, load security, tachographs, paperwork, delivery sites and cab life.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Mike Henderson and James Nicholls">
+  <title>HGV Driving Explained | Practical Guide for New HGV Drivers</title>
+  <meta property="og:title" content="HGV Driving Explained | Practical Guide for New Drivers">
+  <meta property="og:description" content="Clear, practical guidance for new and less experienced HGV drivers—from vehicle checks and coupling to tachographs, load security and delivery sites.">
+  <meta property="og:type" content="book">
+  <meta property="og:site_name" content="HGV Driving Explained">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="HGV Driving Explained">
+  <meta name="twitter:description" content="A practical, illustrated guide for new and less experienced HGV drivers.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "HGV Driving Explained",
+    "alternateName": "HGV Driving Explained: A Practical Guide for New and Less Experienced HGV Drivers",
+    "description": "A practical illustrated guide bridging the gap between passing the HGV test and learning how to do the job safely and professionally.",
+    "author": [
+      {"@type": "Person", "name": "Mike Henderson"},
+      {"@type": "Person", "name": "James Nicholls"}
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Wonky Pencil"
+    },
+    "genre": [
+      "HGV driving",
+      "Professional driving",
+      "Transport training",
+      "Road safety"
+    ],
+    "inLanguage": "en-GB",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "New and less experienced HGV drivers"
+    }
+  }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+html {
+    scroll-behavior: smooth;
+}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #0d2f57;
+    }
+
+    header {
+      background: #07366b;
+      color: white;
+      padding: 18px 30px;
+    }
+
+    .topbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .truck-logo {
+    width: 58px;
+    height: 58px;
+    border: 3px solid #29b6f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+    .brand-text h1 {
+      font-size: 28px;
+      line-height: 1;
+      color: white;
+    }
+
+    .brand-text h1 span {
+      display: block;
+      color: #29b6f6;
+    }
+
+    .brand-text p {
+      margin-top: 6px;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav ul {
+      max-width: 1200px;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      padding: 15px 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0d2f57;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #e0a900;
+    }
+
+    .hero {
+      min-height: 460px;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(4, 41, 82, 0.95) 0%,
+          rgba(4, 41, 82, 0.75) 45%,
+          rgba(4, 41, 82, 0.15) 100%
+        ),
+        url("hero-truck.jpg");
+
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      width: 1200px;
+      max-width: calc(100% - 40px);
+      margin: 0 auto;
+      color: white;
+      padding: 50px 0;
+    }
+
+    .hero h2 {
+      font-size: 58px;
+      line-height: 0.95;
+      max-width: 650px;
+      text-transform: uppercase;
+    }
+
+    .hero h2 span {
+      color: #29b6f6;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 600px;
+      margin-top: 20px;
+      line-height: 1.4;
+    }
+
+    .hero ul {
+      margin-top: 22px;
+      list-style: none;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero li::before {
+      content: "✓";
+      display: inline-block;
+      margin-right: 10px;
+      color: #7cdf68;
+      font-weight: bold;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 25px;
+      background: #29b6f6;
+      color: #0d2f57;
+      padding: 15px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 18px;
+    }
+
+    .hero-button:hover {
+      background: #159bd7;
+    }
+
+    .feature-strip {
+      background: #f3f7fb;
+      border-bottom: 1px solid #dce4ee;
+    }
+
+    .feature-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      padding: 22px 20px;
+      gap: 20px;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: #4b6177;
+    }
+
+    @media (max-width: 800px) {
+      .topbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .hero {
+        min-height: 500px;
+        background-position: 65% center;
+      }
+
+      .hero h2 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .feature-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .brand-text h1 {
+        font-size: 22px;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
+
+      .feature-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+    .about-guide {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.about-guide h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #07366b;
+}
+
+.about-guide h2 span {
+    color: #29b6f6;
+}
+
+.about-guide p {
+    max-width: 850px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: #334e68;
+}
+    @media (max-width: 500px) {
+    .about-guide {
+        padding: 35px 22px;
+    }
+
+    .about-guide h2 {
+        font-size: 28px;
+        line-height: 1.15;
+        margin-bottom: 18px;
+    }
+
+    .about-guide p {
+        font-size: 16px;
+        line-height: 1.55;
+        margin-bottom: 16px;
+    }
+      .book-section {
+    background: #f3f7fb;
+}
+
+.book-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.book-inner h2 {
+    color: #07366b;
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.book-inner h2 span {
+    color: #29b6f6;
+}
+
+.book-inner p {
+    max-width: 800px;
+    color: #334e68;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.book-status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background: #07366b;
+    color: white;
+    font-weight: bold;
+}
+    
+    .site-footer {
+    background: #07366b;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.site-footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.site-footer .footer-title {
+    color: #29b6f6;
+    font-size: 18px;
+    font-weight: bold;
+}
+      /* Desktop layout fixes */
+@media (min-width: 501px) {
+    .feature-inner {
+        gap: 20px;
+        padding: 24px 30px;
+    }
+
+    .feature h3 {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+
+    .feature p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .book-section {
+        background: #f3f7fb;
+    }
+
+    .book-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 55px 30px;
+    }
+
+    .book-inner h2 {
+        color: #07366b;
+        font-size: 36px;
+        margin-bottom: 18px;
+    }
+
+    .book-inner h2 span {
+        color: #29b6f6;
+    }
+
+    .book-inner p {
+        max-width: 800px;
+        color: #334e68;
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+
+    .book-status {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 10px 18px;
+        border-radius: 6px;
+        background: #07366b;
+        color: white;
+        font-weight: bold;
+    }
+}
+      /* Portrait mobile layout fixes */
+@media (max-width: 500px) {
+    .feature-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 12px;
+        padding: 28px 18px;
+    }
+
+    .feature h3 {
+        font-size: 14px;
+        line-height: 1.25;
+    }
+
+    .feature p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .book-inner {
+        padding: 35px 22px;
+    }
+
+    .book-inner h2 {
+        font-size: 28px;
+        line-height: 1.15;
+        margin-bottom: 18px;
+    }
+
+    .book-inner p {
+        font-size: 16px;
+        line-height: 1.55;
+        margin-bottom: 16px;
+    }
+
+    .book-status {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+  </style>
+</head>
+
+
+<body id="home">
+  <header>
+    <div class="topbar">
+
+      <div class="brand">
+        <div class="truck-logo">HGV</div>
+
+        <div class="brand-text">
+          <h1>
+    HGV DRIVING
+    <span>EXPLAINED</span>
+</h1>
+
+          <p>Real Guidance for Real Drivers</p>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#">Free Resources</a></li>
+      <li><a href="#">Driver Resource Centre</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h2>
+    HGV Driving
+    <span>Explained</span>
+</h2>
+
+<p>
+    Practical guidance, clear explanations and real-world advice for new and less experienced HGV drivers.
+</p>
+
+<ul>
+    <li>Understand the everyday tasks your training may not have covered</li>
+    <li>Avoid common mistakes and expensive damage</li>
+    <li>Build confidence from your first day behind the wheel</li>
+</ul>
+
+<a href="#about" class="hero-button">
+    Learn About the Guide →
+</a>
+
+    </div>
+
+  </section>
+
+  <section class="feature-strip">
+
+    <div class="feature-inner">
+
+      <div class="feature">
+        <h3>📘 PRACTICAL GUIDES</h3>
+        <p>Written for drivers</p>
+      </div>
+
+      <div class="feature">
+        <h3>⚙️ REAL-WORLD EXPERIENCE</h3>
+        <p>Know what to expect</p>
+      </div>
+
+      <div class="feature">
+        <h3>📋 DIAGRAMS & CHECKLISTS</h3>
+        <p>See it. Do it. Remember it.</p>
+      </div>
+
+      <div class="feature">
+        <h3>🎓 BUILD CONFIDENCE</h3>
+        <p>Drive safer, work smarter</p>
+      </div>
+
+    </div>
+  </section>
+<section id="books" class="book-section">
+    <div class="book-inner">
+        <h2>HGV Driving <span>Explained</span></h2>
+
+        <p>
+            A practical guide for new and less experienced HGV drivers, written to bridge the gap between passing the test and learning how to do the job safely and professionally.
+        </p>
+
+        <p>
+            The guide covers vehicle checks, coupling and uncoupling, reversing, load security, tachographs, paperwork, delivery sites, communication, cab life and many other situations drivers face throughout their working week.
+        </p>
+
+        <span class="book-status">Paperback and Kindle editions coming soon</span>
+    </div>
+</section>
+  
+<section id="about" class="about-guide">
+    <h2>About <span>HGV Driving Explained</span></h2>
+
+    <p>
+        Passing your HGV test proves that you can drive a large vehicle to the required standard. It does not always prepare you for everything that happens when you are handed the keys and expected to get on with the job.
+    </p>
+
+    <p>
+        HGV Driving Explained provides practical guidance for new and less experienced drivers. It covers the everyday skills, responsibilities and real-world situations that drivers face at depots, delivery sites and out on the road.
+    </p>
+
+    <p>
+        Written by Mike Henderson and James Nicholls, the guide is designed to help drivers avoid costly mistakes, work safely and build confidence through clear explanations, useful diagrams and experience from inside the industry.
+    </p>
+</section>
+  <footer class="site-footer">
+    <p class="footer-title">HGV Driving Explained</p>
+    <p>Practical guidance for new and less experienced HGV drivers</p>
+    <p>Written by Mike Henderson and James Nicholls</p>
+    <p>&copy; 2026 HGV Driving Explained. All rights reserved.</p>
+  </footer>
+</body>
+</html>
