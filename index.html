@@ -466,6 +466,41 @@ html {
         line-height: 1.4;
     }
 }
+    .content-inner { width: min(1100px, calc(100% - 44px)); margin: 0 auto; }
+    .inside-guide, .faq-section { padding: 65px 0; background: #ffffff; }
+    .content-heading { max-width: 780px; margin: 0 auto 30px; text-align: center; }
+    .content-heading span, .section-label { color: #197faf; font-size: 13px; font-weight: bold; letter-spacing: 1.4px; }
+    .content-heading h2, .resource-section h2 { color: #07366b; font-size: 36px; margin: 8px 0 12px; }
+    .content-heading p, .resource-section p { color: #334e68; font-size: 17px; line-height: 1.65; }
+    .topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .topic-card { background: #f3f7fb; border: 1px solid #dce4ee; border-radius: 12px; padding: 22px; }
+    .topic-icon { font-size: 29px; margin-bottom: 10px; }
+    .topic-card h3 { color: #07366b; font-size: 18px; margin-bottom: 8px; }
+    .topic-card p { color: #4b6177; font-size: 15px; line-height: 1.55; }
+    .resource-section { padding: 65px 0; background: #07366b; color: #ffffff; }
+    .resource-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: center; }
+    .resource-section h2, .resource-section p { color: #ffffff; }
+    .resource-section p + p { margin-top: 14px; }
+    .resource-list { display: grid; gap: 12px; }
+    .resource-list div { background: rgba(255,255,255,.1); border-left: 4px solid #29b6f6; padding: 16px 18px; }
+    .resource-list strong, .resource-list span { display: block; }
+    .resource-list span { margin-top: 4px; color: #dceafa; font-size: 14px; line-height: 1.5; }
+    .faq-section { background: #f3f7fb; }
+    .faq-list { max-width: 900px; margin: 0 auto; display: grid; gap: 12px; }
+    .faq-list details { background: #ffffff; border: 1px solid #d5e0eb; border-radius: 10px; padding: 0 20px; }
+    .faq-list summary { cursor: pointer; color: #07366b; font-size: 17px; font-weight: bold; padding: 18px 32px 18px 0; }
+    .faq-list details p { color: #334e68; font-size: 15px; line-height: 1.6; padding: 0 0 18px; }
+    @media (max-width: 800px) {
+      .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .resource-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 500px) {
+      .inside-guide, .resource-section, .faq-section { padding: 45px 0; }
+      .content-inner { width: calc(100% - 36px); }
+      .content-heading h2, .resource-section h2 { font-size: 28px; }
+      .topic-grid { grid-template-columns: 1fr; }
+      .topic-card { padding: 18px; }
+    }
   </style>
 </head>
 
@@ -493,12 +528,11 @@ html {
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#books">Books</a></li>
-      <li><a href="#">Free Resources</a></li>
-      <li><a href="#">Driver Resource Centre</a></li>
+      <li><a href="#books">The Guide</a></li>
+      <li><a href="#inside">Inside the Guide</a></li>
+      <li><a href="#resources">Driver Resource Centre</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#">FAQs</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#faqs">FAQs</a></li>
     </ul>
   </nav>
 
@@ -570,7 +604,28 @@ html {
         <span class="book-status">Paperback and Kindle editions coming soon</span>
     </div>
 </section>
-  
+
+<section id="inside" class="inside-guide">
+  <div class="content-inner">
+    <div class="content-heading">
+      <span>WHAT THE TEST DOESN'T TEACH YOU</span>
+      <h2>Inside the Guide</h2>
+      <p>Plain-English help for the jobs, decisions and situations new drivers encounter once they are handed the keys.</p>
+    </div>
+    <div class="topic-grid">
+      <article class="topic-card"><div class="topic-icon">🚛</div><h3>Your First HGV Job</h3><p>What to expect during your first days and weeks, from receiving the keys to settling into a working routine.</p></article>
+      <article class="topic-card"><div class="topic-icon">🔍</div><h3>Checks &amp; Defects</h3><p>Daily walkaround checks, defect reporting and the responsibility that comes with looking after an expensive vehicle.</p></article>
+      <article class="topic-card"><div class="topic-icon">🔗</div><h3>Coupling &amp; Uncoupling</h3><p>Clear sequences covering the fifth wheel, tug test, landing legs, air lines and electrical connections.</p></article>
+      <article class="topic-card"><div class="topic-icon">↩️</div><h3>Reversing &amp; Manoeuvring</h3><p>Practical techniques for setting up safely, controlling the trailer and knowing when to stop and reset.</p></article>
+      <article class="topic-card"><div class="topic-icon">📦</div><h3>Loads &amp; Security</h3><p>Understanding load movement, restraints, curtains, straps and the checks required throughout a journey.</p></article>
+      <article class="topic-card"><div class="topic-icon">⏱️</div><h3>Tachographs &amp; Hours</h3><p>Modes, entries, common mistakes and an accessible explanation of the records drivers must keep.</p></article>
+      <article class="topic-card"><div class="topic-icon">📋</div><h3>Sites &amp; Paperwork</h3><p>Arriving prepared, communicating professionally and dealing with collections, deliveries and documentation.</p></article>
+      <article class="topic-card"><div class="topic-icon">🛢️</div><h3>Specialist Vehicles</h3><p>Introductions to tankers and other specialist work, supported by photographs, diagrams and safety reminders.</p></article>
+      <article class="topic-card"><div class="topic-icon">☕</div><h3>Life on the Road</h3><p>Cab life, communication, wellbeing and the everyday habits that help drivers work safely and professionally.</p></article>
+    </div>
+  </div>
+</section>
+
 <section id="about" class="about-guide">
     <h2>About <span>HGV Driving Explained</span></h2>
 
@@ -586,6 +641,37 @@ html {
         Written by Mike Henderson and James Nicholls, the guide is designed to help drivers avoid costly mistakes, work safely and build confidence through clear explanations, useful diagrams and experience from inside the industry.
     </p>
 </section>
+
+<section id="resources" class="resource-section">
+  <div class="content-inner resource-inner">
+    <div>
+      <span class="section-label">COMING WITH THE BOOK</span>
+      <h2>Driver Resource Centre</h2>
+      <p>The website is being developed as a companion to <strong>HGV Driving Explained</strong>. It will bring useful book-related material together so readers can quickly revisit practical information when they need it.</p>
+      <p>Details of the resources and how readers will access them will be announced closer to publication.</p>
+    </div>
+    <div class="resource-list">
+      <div><strong>Quick-reference checklists</strong><span>Important sequences in a format that is easy to revisit.</span></div>
+      <div><strong>Supporting diagrams</strong><span>Clear visual reminders to accompany selected parts of the guide.</span></div>
+      <div><strong>Book updates</strong><span>Corrections and important changes affecting published guidance.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faqs" class="faq-section">
+  <div class="content-inner">
+    <div class="content-heading"><span>FREQUENTLY ASKED QUESTIONS</span><h2>About the Book</h2></div>
+    <div class="faq-list">
+      <details><summary>Who is HGV Driving Explained for?</summary><p>It is written primarily for newly qualified and less experienced HGV drivers, although drivers considering different types of work may also find the specialist sections useful.</p></details>
+      <details><summary>Does the book replace professional training?</summary><p>No. The guide supports learning and helps drivers understand everyday working situations. It does not replace approved training, company procedures, current legislation or instructions from a responsible employer.</p></details>
+      <details><summary>Will it include photographs and diagrams?</summary><p>Yes. The book is being designed as an illustrated practical guide, using photographs, diagrams, checklists and step-by-step explanations where a visual example makes the subject easier to understand.</p></details>
+      <details><summary>What subjects will it cover?</summary><p>Planned subjects include checks, defects, coupling, reversing, load security, tachographs, paperwork, delivery sites, communication, cab life and introductions to specialist HGV work.</p></details>
+      <details><summary>Will it be available in print and digitally?</summary><p>Paperback and Kindle editions are planned. Final formats, publication details and availability will be confirmed nearer release.</p></details>
+      <details><summary>Can businesses or training providers order copies?</summary><p>Options for businesses, training providers and other organisations are being considered as part of the publication plan. Further information will be added before release.</p></details>
+    </div>
+  </div>
+</section>
+
   <footer class="site-footer">
     <p class="footer-title">HGV Driving Explained</p>
     <p>Practical guidance for new and less experienced HGV drivers</p>
