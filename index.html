@@ -696,15 +696,14 @@ html {
     }
 
     .guide-download-card {
-      position: relative;
       background: #ffffff;
       border: 1px solid #d8e3ed;
       border-radius: 12px;
-      padding: 18px 18px 18px 62px;
-      display: flex;
-      justify-content: space-between;
+      padding: 16px 18px;
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr) auto;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       box-shadow: 0 6px 18px rgba(7,54,107,.06);
       transition: transform .15s ease, box-shadow .15s ease;
     }
@@ -714,21 +713,19 @@ html {
       box-shadow: 0 10px 24px rgba(7,54,107,.10);
     }
 
-    .guide-number {
-      position: absolute;
-      left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #07366b;
-      color: #ffd400;
-      font-size: 13px;
-      font-weight: 900;
+    .guide-thumb {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+      border: 1px solid #d8e3ed;
+      box-shadow: 0 4px 12px rgba(7,54,107,.08);
+      background: #f7fbff;
+    }
+
+    .guide-meta {
+      min-width: 0;
     }
 
     .guide-download-card strong {
@@ -791,12 +788,15 @@ html {
 
     @media (max-width: 430px) {
       .guide-download-card {
-        align-items: flex-start;
-        flex-direction: column;
-        padding-left: 60px;
+        grid-template-columns: 56px minmax(0, 1fr);
+        gap: 14px;
       }
-      .guide-number { top: 22px; transform: none; }
+      .guide-thumb {
+        width: 56px;
+        height: 56px;
+      }
       .guide-download-card a {
+        grid-column: 1 / -1;
         width: 100%;
         text-align: center;
       }
@@ -968,14 +968,14 @@ html {
     </div>
 
     <div class="guide-download-grid">
-      <div class="guide-download-card"><span class="guide-number">01</span><div><strong>HGV Coupling &amp; Uncoupling — Practical Driver Guide</strong><span>£2.99 • PDF download</span></div><a href="https://payhip.com/b/DtC2o" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><span class="guide-number">02</span><div><strong>HGV Tachograph Rules — Driver Guide</strong><span>£3.99 • PDF download</span></div><a href="https://payhip.com/b/UVOvf" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><span class="guide-number">03</span><div><strong>HGV Digital Tachograph — Practical Driver Guide</strong><span>£3.99 • PDF download</span></div><a href="https://payhip.com/b/gp7nJ" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><span class="guide-number">04</span><div><strong>HGV Accident &amp; Incident Reporting — Driver Guide</strong><span>£2.99 • PDF download</span></div><a href="https://payhip.com/b/xmZiq" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><span class="guide-number">05</span><div><strong>HGV Tanker Driving — Practical Driver Guide</strong><span>£2.99 • PDF download</span></div><a href="https://payhip.com/b/POU7u" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><span class="guide-number">06</span><div><strong>HGV Container Operations — Driver Guide</strong><span>£6.99 • PDF download</span></div><a href="https://payhip.com/b/yNY6G" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><span class="guide-number">07</span><div><strong>HGV Curtainsider Operations — Driver Guide</strong><span>£2.49 • PDF download</span></div><a href="https://payhip.com/b/MIPm3" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><span class="guide-number">08</span><div><strong>HGV Ratchet Straps &amp; Load Securing — Driver Guide</strong><span>£2.49 • PDF download</span></div><a href="https://payhip.com/b/csGTV" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><img class="guide-thumb" src="hgv_coupling_and_uncoupling_guide.png" alt="HGV Coupling and Uncoupling guide cover"><div class="guide-meta"><strong>HGV Coupling &amp; Uncoupling — Practical Driver Guide</strong><span>£2.99 • PDF download</span></div><a href="https://payhip.com/b/DtC2o" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><img class="guide-thumb" src="HGV_Tachograph_Rules_Payhip_Thumbnail.png" alt="HGV Tachograph Rules guide cover"><div class="guide-meta"><strong>HGV Tachograph Rules — Driver Guide</strong><span>£3.99 • PDF download</span></div><a href="https://payhip.com/b/UVOvf" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><img class="guide-thumb" src="HGV_Digital_Tachograph_Payhip_Thumbnail.png" alt="HGV Digital Tachograph guide cover"><div class="guide-meta"><strong>HGV Digital Tachograph — Practical Driver Guide</strong><span>£3.99 • PDF download</span></div><a href="https://payhip.com/b/gp7nJ" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><img class="guide-thumb" src="HGV_Accident_Incident_Reporting_Payhip_Thumbnail.png" alt="HGV Accident and Incident Reporting guide cover"><div class="guide-meta"><strong>HGV Accident &amp; Incident Reporting — Driver Guide</strong><span>£2.99 • PDF download</span></div><a href="https://payhip.com/b/xmZiq" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><img class="guide-thumb" src="HGV_Tanker_Driving_Payhip_Thumbnail.png" alt="HGV Tanker Driving guide cover"><div class="guide-meta"><strong>HGV Tanker Driving — Practical Driver Guide</strong><span>£2.99 • PDF download</span></div><a href="https://payhip.com/b/POU7u" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><img class="guide-thumb" src="HGV_Container_Operations_Payhip_Thumbnail.png" alt="HGV Container Operations guide cover"><div class="guide-meta"><strong>HGV Container Operations — Driver Guide</strong><span>£6.99 • PDF download</span></div><a href="https://payhip.com/b/yNY6G" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><img class="guide-thumb" src="HGV_Curtainsider_Operations_Payhip_Thumbnail.png" alt="HGV Curtainsider Operations guide cover"><div class="guide-meta"><strong>HGV Curtainsider Operations — Driver Guide</strong><span>£2.49 • PDF download</span></div><a href="https://payhip.com/b/MIPm3" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><img class="guide-thumb" src="HGV_Ratchet_Straps_Load_Securing_Payhip_Thumbnail.png" alt="HGV Ratchet Straps and Load Securing guide cover"><div class="guide-meta"><strong>HGV Ratchet Straps &amp; Load Securing — Driver Guide</strong><span>£2.49 • PDF download</span></div><a href="https://payhip.com/b/csGTV" target="_blank" rel="noopener">View Guide</a></div>
     </div>
 
     <div class="safety-note"><strong>Important:</strong> These resources provide practical guidance and do not replace formal training, current legislation, DVSA/GOV.UK guidance, employer or site procedures, or manufacturer instructions. If anything is unclear or appears unsafe, stop and seek appropriate guidance before proceeding.</div>
