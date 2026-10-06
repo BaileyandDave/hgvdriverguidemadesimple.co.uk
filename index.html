@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="HGV Driving Explained is a practical guide for new and less experienced HGV drivers, covering vehicle checks, coupling, reversing, load security, tachographs, paperwork, delivery sites and cab life.">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="author" content="Mike Henderson and James Nicholls">
+  <meta name="author" content="Mike Henderson and James Nichols">
   <title>HGV Driving Explained | Practical Guide for New HGV Drivers</title>
   <link rel="canonical" href="https://www.hgvdrivingexplained.co.uk/">
   <meta property="og:title" content="HGV Driving Explained | Practical Guide for New Drivers">
@@ -31,7 +31,7 @@
     "description": "A practical illustrated guide bridging the gap between passing the HGV test and learning how to do the job safely and professionally.",
     "author": [
       {"@type": "Person", "name": "Mike Henderson"},
-      {"@type": "Person", "name": "James Nicholls"}
+      {"@type": "Person", "name": "James Nichols"}
     ],
     "publisher": {
       "@type": "Organization",
@@ -510,26 +510,296 @@ html {
     }
 
     /* Paid driver downloads */
-    .download-section { padding: 65px 0; background: #f3f7fb; }
-    .download-intro { max-width: 820px; margin: 0 auto 30px; text-align: center; }
-    .download-intro .section-label { color: #197faf; }
-    .download-intro h2 { color: #07366b; font-size: 36px; margin: 8px 0 12px; }
-    .download-intro p { color: #334e68; font-size: 17px; line-height: 1.65; }
-    .bundle-offer { max-width: 900px; margin: 0 auto 28px; padding: 26px; background: #07366b; color: #fff; border-radius: 14px; text-align: center; box-shadow: 0 8px 24px rgba(7,54,107,.12); }
-    .bundle-offer h3 { font-size: 26px; margin-bottom: 8px; }
-    .bundle-price { font-size: 34px; font-weight: bold; color: #fff; margin: 8px 0 6px; }
-    .bundle-save { color: #dceafa; font-size: 15px; line-height: 1.5; margin-bottom: 18px; }
-    .shop-button { display: inline-block; background: #29b6f6; color: #0d2f57; padding: 14px 22px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 5px; }
-    .shop-button:hover { background: #159bd7; }
-    .guide-download-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
-    .guide-download-card { background: #fff; border: 1px solid #dce4ee; border-radius: 12px; padding: 18px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-    .guide-download-card strong { display: block; color: #07366b; font-size: 16px; line-height: 1.35; }
-    .guide-download-card span { display: block; margin-top: 5px; color: #4b6177; font-size: 14px; }
-    .guide-download-card a { flex: 0 0 auto; text-decoration: none; background: #e0a900; color: #0d2f57; padding: 10px 14px; border-radius: 7px; font-weight: bold; white-space: nowrap; }
-    .guide-download-card a:hover { background: #c99600; }
-    @media (max-width:700px){ .download-section{padding:45px 0;} .download-intro h2{font-size:28px;} .guide-download-grid{grid-template-columns:1fr;} .guide-download-card{align-items:flex-start;} }
-    @media (max-width:430px){ .guide-download-card{flex-direction:column;} .guide-download-card a{width:100%;text-align:center;} }
+    .download-section {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(41,182,246,.12), transparent 34%),
+        linear-gradient(180deg, #f8fbfe 0%, #eef5fb 100%);
+      border-top: 1px solid #dce4ee;
+      border-bottom: 1px solid #dce4ee;
+    }
 
+    .download-intro {
+      max-width: 820px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .download-intro .section-label {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #e5f6ff;
+      color: #0d6f9f;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+    }
+
+    .download-intro h2 {
+      color: #07366b;
+      font-size: 40px;
+      margin: 12px 0 12px;
+      line-height: 1.05;
+    }
+
+    .download-intro p {
+      color: #334e68;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .bundle-offer {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto 22px;
+      padding: 34px;
+      background: linear-gradient(135deg, #052c58 0%, #07366b 55%, #0b4b86 100%);
+      color: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(7,54,107,.18);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .bundle-badge {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #ffd400;
+      color: #0d2f57;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .bundle-layout {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .bundle-offer h3 {
+      font-size: 30px;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .bundle-offer p {
+      color: #e9f4ff;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .bundle-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .bundle-highlights span {
+      display: inline-block;
+      padding: 8px 11px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.12);
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .bundle-buybox {
+      text-align: center;
+      padding: 22px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+    }
+
+    .bundle-buybox .small-label {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #c9e6f8;
+      font-weight: 800;
+    }
+
+    .bundle-price {
+      font-size: 44px;
+      font-weight: 900;
+      color: #ffffff;
+      margin: 5px 0 2px;
+      line-height: 1;
+    }
+
+    .bundle-saving {
+      display: inline-block;
+      margin: 8px 0 14px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #ffd400;
+      color: #0d2f57;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .shop-button {
+      display: inline-block;
+      background: #29b6f6;
+      color: #062d58;
+      padding: 14px 20px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: 900;
+      margin: 5px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    }
+
+    .shop-button:hover {
+      background: #53c8fb;
+      transform: translateY(-1px);
+    }
+
+    .download-benefits {
+      max-width: 980px;
+      margin: 0 auto 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .download-benefits div {
+      background: #ffffff;
+      border: 1px solid #dce4ee;
+      border-radius: 10px;
+      padding: 13px 12px;
+      text-align: center;
+      color: #334e68;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(7,54,107,.05);
+    }
+
+    .guide-download-grid {
+      max-width: 980px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .guide-download-card {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #d8e3ed;
+      border-radius: 12px;
+      padding: 18px 18px 18px 62px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 6px 18px rgba(7,54,107,.06);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .guide-download-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(7,54,107,.10);
+    }
+
+    .guide-number {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #07366b;
+      color: #ffd400;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .guide-download-card strong {
+      display: block;
+      color: #07366b;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .guide-download-card span {
+      display: block;
+      margin-top: 6px;
+      color: #587089;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .guide-download-card a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      background: #ffd400;
+      color: #0d2f57;
+      padding: 10px 13px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .guide-download-card a:hover {
+      background: #e8be00;
+    }
+
+    .safety-note {
+      max-width: 980px;
+      margin: 24px auto 0;
+      padding: 15px 18px;
+      border-radius: 10px;
+      background: #fffdf2;
+      border: 1px solid #eadb9b;
+      color: #5b532e;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 800px) {
+      .bundle-layout { grid-template-columns: 1fr; }
+      .bundle-buybox { text-align: left; }
+      .download-benefits { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 700px) {
+      .download-section { padding: 50px 0; }
+      .download-intro h2 { font-size: 31px; }
+      .bundle-offer { padding: 24px 20px; }
+      .bundle-offer h3 { font-size: 25px; }
+      .bundle-price { font-size: 38px; }
+      .guide-download-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 430px) {
+      .guide-download-card {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-left: 60px;
+      }
+      .guide-number { top: 22px; transform: none; }
+      .guide-download-card a {
+        width: 100%;
+        text-align: center;
+      }
+      .bundle-buybox { padding: 18px; }
+    }
   </style>
 </head>
 
@@ -665,23 +935,47 @@ html {
     <div class="download-intro">
       <span class="section-label">AVAILABLE NOW</span>
       <h2>HGV Driver Downloads</h2>
-      <p>Download practical PDF guides for the parts of HGV work that are often learned through experience. Buy an individual guide when you need it, or get all seven together in the Complete Driver Guide Bundle.</p>
+      <p>Practical PDF guides for the parts of HGV work that are often learned through experience. Choose the guide you need, or get all seven together for the best value.</p>
     </div>
+
     <div class="bundle-offer">
-      <h3>Complete Driver Guide Bundle</h3>
-      <div class="bundle-price">£14.99</div>
-      <p class="bundle-save">Seven practical PDF guides in one bundle — Tachograph Rules, Digital Tachograph, Tanker Driving, Accident &amp; Incident Reporting, Container Operations, Curtainsider Operations, and Ratchet Straps &amp; Load Securing.</p>
-      <a class="shop-button" href="https://payhip.com/b/SwQF4" target="_blank" rel="noopener">Buy the Complete Bundle →</a>
+      <div class="bundle-layout">
+        <div>
+          <span class="bundle-badge">BEST VALUE • 7 GUIDES</span>
+          <h3>Complete Driver Guide Bundle</h3>
+          <p>Get the full collection in one download package: Tachograph Rules, Digital Tachograph, Tanker Driving, Accident &amp; Incident Reporting, Container Operations, Curtainsider Operations, and Ratchet Straps &amp; Load Securing.</p>
+          <div class="bundle-highlights">
+            <span>✓ 7 practical PDFs</span>
+            <span>✓ Instant access</span>
+            <span>✓ Keep on any device</span>
+          </div>
+        </div>
+        <div class="bundle-buybox">
+          <span class="small-label">Complete bundle</span>
+          <div class="bundle-price">£14.99</div>
+          <span class="bundle-saving">SAVE £10.94</span><br>
+          <a class="shop-button" href="https://payhip.com/b/SwQF4" target="_blank" rel="noopener">Get All 7 Guides →</a>
+        </div>
+      </div>
     </div>
+
+    <div class="download-benefits">
+      <div>⚡ Instant PDF download</div>
+      <div>📱 Keep on phone, tablet or computer</div>
+      <div>🔒 Secure checkout through Payhip</div>
+    </div>
+
     <div class="guide-download-grid">
-      <div class="guide-download-card"><div><strong>HGV Tachograph Rules — Driver Guide</strong><span>£3.99 PDF download</span></div><a href="https://payhip.com/b/UVOvf" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><div><strong>HGV Digital Tachograph — Practical Driver Guide</strong><span>£3.99 PDF download</span></div><a href="https://payhip.com/b/gp7nJ" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><div><strong>HGV Tanker Driving — Practical Driver Guide</strong><span>£2.99 PDF download</span></div><a href="https://payhip.com/b/POU7u" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><div><strong>HGV Accident &amp; Incident Reporting — Driver Guide</strong><span>£2.99 PDF download</span></div><a href="https://payhip.com/b/xmZiq" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><div><strong>HGV Container Operations — Driver Guide</strong><span>£6.99 PDF download</span></div><a href="https://payhip.com/b/yNY6G" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><div><strong>HGV Curtainsider Operations — Driver Guide</strong><span>£2.49 PDF download</span></div><a href="https://payhip.com/b/MIPm3" target="_blank" rel="noopener">View Guide</a></div>
-      <div class="guide-download-card"><div><strong>HGV Ratchet Straps &amp; Load Securing — Driver Guide</strong><span>£2.49 PDF download</span></div><a href="https://payhip.com/b/csGTV" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><span class="guide-number">01</span><div><strong>HGV Tachograph Rules — Driver Guide</strong><span>£3.99 • PDF download</span></div><a href="https://payhip.com/b/UVOvf" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><span class="guide-number">02</span><div><strong>HGV Digital Tachograph — Practical Driver Guide</strong><span>£3.99 • PDF download</span></div><a href="https://payhip.com/b/gp7nJ" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><span class="guide-number">03</span><div><strong>HGV Tanker Driving — Practical Driver Guide</strong><span>£2.99 • PDF download</span></div><a href="https://payhip.com/b/POU7u" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><span class="guide-number">04</span><div><strong>HGV Accident &amp; Incident Reporting — Driver Guide</strong><span>£2.99 • PDF download</span></div><a href="https://payhip.com/b/xmZiq" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><span class="guide-number">05</span><div><strong>HGV Container Operations — Driver Guide</strong><span>£6.99 • PDF download</span></div><a href="https://payhip.com/b/yNY6G" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><span class="guide-number">06</span><div><strong>HGV Curtainsider Operations — Driver Guide</strong><span>£2.49 • PDF download</span></div><a href="https://payhip.com/b/MIPm3" target="_blank" rel="noopener">View Guide</a></div>
+      <div class="guide-download-card"><span class="guide-number">07</span><div><strong>HGV Ratchet Straps &amp; Load Securing — Driver Guide</strong><span>£2.49 • PDF download</span></div><a href="https://payhip.com/b/csGTV" target="_blank" rel="noopener">View Guide</a></div>
     </div>
+
+    <div class="safety-note"><strong>Important:</strong> These resources provide practical guidance and do not replace formal training, current legislation, DVSA/GOV.UK guidance, employer or site procedures, or manufacturer instructions. If anything is unclear or appears unsafe, stop and seek appropriate guidance before proceeding.</div>
   </div>
 </section>
 
@@ -697,7 +991,7 @@ html {
     </p>
 
     <p>
-        Written by Mike Henderson and James Nicholls, the guide is designed to help drivers avoid costly mistakes, work safely and build confidence through clear explanations, useful diagrams and experience from inside the industry.
+        Written by Mike Henderson and James Nichols, the guide is designed to help drivers avoid costly mistakes, work safely and build confidence through clear explanations, useful diagrams and experience from inside the industry.
     </p>
 </section>
 
@@ -723,9 +1017,9 @@ html {
     <div class="content-heading"><span>FREQUENTLY ASKED QUESTIONS</span><h2>About the Book</h2></div>
     <div class="faq-list">
       <details><summary>Who is HGV Driving Explained for?</summary><p>It is written primarily for newly qualified and less experienced HGV drivers, although drivers considering different types of work may also find the specialist sections useful.</p></details>
-      <details><summary>Does the book replace professional training?</summary><p>No. The guide supports learning and helps drivers understand everyday working situations. It does not replace approved training, company procedures, current legislation or instructions from a responsible employer.</p></details>
-      <details><summary>Will it include photographs and diagrams?</summary><p>Yes. The book is being designed as an illustrated practical guide, using photographs, diagrams, checklists and step-by-step explanations where a visual example makes the subject easier to understand.</p></details>
-      <details><summary>What subjects will it cover?</summary><p>Planned subjects include checks, defects, coupling, reversing, load security, tachographs, paperwork, delivery sites, communication, cab life and introductions to specialist HGV work.</p></details>
+      <details><summary>Does the book replace professional training?</summary><p>No. The guide supports learning and helps drivers understand everyday working situations. It does not replace formal or approved training, current legislation, DVSA/GOV.UK guidance, an employer’s safe system of work, site procedures, or vehicle, trailer and equipment manufacturer instructions. If anything is unclear or appears unsafe, stop and seek appropriate guidance before proceeding.</p></details>
+      <details><summary>Does it include photographs and diagrams?</summary><p>Yes. The book is an illustrated practical guide using photographs, diagrams, checklists and step-by-step explanations where a visual example makes the subject easier to understand.</p></details>
+      <details><summary>What subjects does it cover?</summary><p>The book covers checks, defects, coupling, reversing, load security, tachographs, paperwork, delivery sites, communication, cab life and introductions to specialist HGV work.</p></details>
       <details><summary>Will it be available in print and digitally?</summary><p>Paperback and Kindle editions are planned. Final formats, publication details and availability will be confirmed nearer release.</p></details>
       <details><summary>Can businesses or training providers order copies?</summary><p>Options for businesses, training providers and other organisations are being considered as part of the publication plan. Further information will be added before release.</p></details>
     </div>
@@ -735,7 +1029,7 @@ html {
   <footer class="site-footer">
     <p class="footer-title">HGV Driving Explained</p>
     <p>Practical guidance for new and less experienced HGV drivers</p>
-    <p>Written by Mike Henderson and James Nicholls</p>
+    <p>Written by Mike Henderson and James Nichols</p>
     <p>&copy; 2026 HGV Driving Explained. All rights reserved.</p>
   </footer>
 </body>
