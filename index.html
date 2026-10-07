@@ -362,6 +362,114 @@ html {
     color: white;
     font-weight: bold;
 }
+
+.book-buy-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 34px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+.book-cover-wrap {
+    position: relative;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.book-cover-wrap img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 16px 36px rgba(7,54,107,.22);
+}
+
+.deluxe-overlay {
+    position: absolute;
+    top: 22%;
+    right: -10px;
+    background: linear-gradient(135deg,#ffe789,#d5a620);
+    color: #08284b;
+    border: 2px solid #b98b14;
+    box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    border-radius: 9px;
+    padding: 9px 11px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.15;
+    font-weight: 900;
+    letter-spacing: .03em;
+}
+
+.book-options {
+    display: grid;
+    gap: 14px;
+}
+
+.book-option {
+    background: #fff;
+    border: 1px solid #d9e6f2;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 7px 18px rgba(7,54,107,.07);
+}
+
+.book-option h3 {
+    color: #07366b;
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.book-option p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.book-option .price {
+    color: #07366b;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.book-buy-button {
+    display: inline-block;
+    background: #07366b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 11px 16px;
+    border-radius: 7px;
+}
+
+.book-buy-button:hover {
+    background: #0b4f91;
+}
+
+.book-buy-button.deluxe {
+    background: #d8a827;
+    color: #08284b;
+}
+
+.book-buy-button.deluxe:hover {
+    background: #edc54d;
+}
+
+.fulfil-note {
+    color: #5a7087;
+    font-size: 13px !important;
+    margin-top: 9px !important;
+}
+
+@media (max-width: 760px) {
+    .book-buy-grid {
+        grid-template-columns: 1fr;
+    }
+    .book-cover-wrap {
+        max-width: 235px;
+    }
+}
     
     .site-footer {
     background: #07366b;
@@ -906,7 +1014,38 @@ html {
             The guide covers vehicle checks, coupling and uncoupling, reversing, load security, tachographs, paperwork, delivery sites, communication, cab life and many other situations drivers face throughout their working week.
         </p>
 
-        <span class="book-status">Paperback and Kindle editions coming soon</span>
+        <span class="book-status">Paperback, Kindle and Deluxe Full Colour editions available now</span>
+
+        <div class="book-buy-grid">
+            <div class="book-cover-wrap">
+                <img src="hgv-book-cover.jpg" alt="HGV Driving Explained book cover">
+                <div class="deluxe-overlay">DELUXE<br>FULL COLOUR EDITION</div>
+            </div>
+
+            <div class="book-options">
+                <div class="book-option">
+                    <h3>Driver's Edition — Paperback</h3>
+                    <div class="price">£16.99</div>
+                    <p>The practical black-and-white paperback edition, available with fast Amazon delivery.</p>
+                    <a class="book-buy-button" href="https://amzn.eu/d/064tafjh" target="_blank" rel="noopener">Buy Paperback on Amazon →</a>
+                </div>
+
+                <div class="book-option">
+                    <h3>Kindle Edition</h3>
+                    <div class="price">£9.99</div>
+                    <p>Read HGV Driving Explained instantly on Kindle and the Kindle app.</p>
+                    <a class="book-buy-button" href="https://amzn.eu/d/064tafjh" target="_blank" rel="noopener">Buy Kindle Edition →</a>
+                </div>
+
+                <div class="book-option">
+                    <h3>Deluxe Full Colour Edition</h3>
+                    <div class="price">£24.99</div>
+                    <p>The premium full-colour paperback with the book's photographs, diagrams and practical visuals reproduced in colour.</p>
+                    <a class="book-buy-button deluxe" href="https://payhip.com/b/83H4Q" target="_blank" rel="noopener">Buy Deluxe Full Colour Edition →</a>
+                    <p class="fulfil-note">Secure checkout through Payhip. Printed and dispatched by BookVault. Delivery is calculated at checkout.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -1023,7 +1162,7 @@ html {
       <details><summary>Does the book replace professional training?</summary><p>No. The guide supports learning and helps drivers understand everyday working situations. It does not replace formal or approved training, current legislation, DVSA/GOV.UK guidance, an employer’s safe system of work, site procedures, or vehicle, trailer and equipment manufacturer instructions. If anything is unclear or appears unsafe, stop and seek appropriate guidance before proceeding.</p></details>
       <details><summary>Does it include photographs and diagrams?</summary><p>Yes. The book is an illustrated practical guide using photographs, diagrams, checklists and step-by-step explanations where a visual example makes the subject easier to understand.</p></details>
       <details><summary>What subjects does it cover?</summary><p>The book covers checks, defects, coupling, reversing, load security, tachographs, paperwork, delivery sites, communication, cab life and introductions to specialist HGV work.</p></details>
-      <details><summary>Will it be available in print and digitally?</summary><p>Paperback and Kindle editions are planned. Final formats, publication details and availability will be confirmed nearer release.</p></details>
+      <details><summary>Is it available in print and digitally?</summary><p>Yes. The Driver's Edition paperback and Kindle edition are available through Amazon, and the Deluxe Full Colour Edition is available to order direct through Payhip with BookVault fulfilment.</p></details>
       <details><summary>Can businesses or training providers order copies?</summary><p>Options for businesses, training providers and other organisations are being considered as part of the publication plan. Further information will be added before release.</p></details>
     </div>
   </div>
