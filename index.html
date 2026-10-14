@@ -902,7 +902,36 @@ html {
       }
       .bundle-buybox { padding: 18px; }
     }
-  </style>
+  
+/* Cookie consent */
+.cookie-banner {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  max-width: 700px;
+  margin: auto;
+  background: #07366b;
+  color: white;
+  padding: 18px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  z-index: 9999;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cookie-banner button {
+  margin: 12px 8px 0 0;
+  padding: 9px 16px;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.cookie-accept { background:#29b6f6; color:#062d58; }
+.cookie-reject { background:#ffffff; color:#07366b; }
+
+</style>
 </head>
 
 
@@ -1020,21 +1049,21 @@ html {
                     <h3>Driver's Edition — Paperback</h3>
                     <div class="price">£16.99</div>
                     <p>The practical black-and-white paperback edition, available with fast Amazon delivery.</p>
-                    <a class="book-buy-button" href="https://amzn.eu/d/064tafjh" target="_blank" rel="noopener">Buy Paperback on Amazon →</a>
+                    <a class="book-buy-button" href="https://amzn.eu/d/064tafjh" onclick="trackClick('amazon_book_click')" target="_blank" rel="noopener">Buy Paperback on Amazon →</a>
                 </div>
 
                 <div class="book-option">
                     <h3>Kindle Edition</h3>
                     <div class="price">£9.99</div>
                     <p>Read HGV Driving Explained instantly on Kindle and the Kindle app.</p>
-                    <a class="book-buy-button" href="https://amzn.eu/d/064tafjh" target="_blank" rel="noopener">Buy Kindle Edition →</a>
+                    <a class="book-buy-button" href="https://amzn.eu/d/064tafjh" onclick="trackClick('amazon_book_click')" target="_blank" rel="noopener">Buy Kindle Edition →</a>
                 </div>
 
                 <div class="book-option">
                     <h3>Deluxe Full Colour Edition</h3>
                     <div class="price">£24.99</div>
                     <p>The premium full-colour paperback with the book's photographs, diagrams and practical visuals reproduced in colour.</p>
-                    <a class="book-buy-button deluxe" href="https://payhip.com/b/83H4Q" target="_blank" rel="noopener">Buy Deluxe Full Colour Edition →</a>
+                    <a class="book-buy-button deluxe" href="https://payhip.com/b/83H4Q" onclick="trackClick('payhip_deluxe_click')" target="_blank" rel="noopener">Buy Deluxe Full Colour Edition →</a>
                     <p class="fulfil-note">Secure checkout through Payhip. Printed and dispatched by BookVault. Delivery is calculated at checkout.</p>
                 </div>
             </div>
@@ -1088,7 +1117,7 @@ html {
           <span class="small-label">Complete bundle</span>
           <div class="bundle-price">£14.99</div>
           <span class="bundle-saving">SAVE £13.93</span><br>
-          <a class="shop-button" href="https://payhip.com/b/SwQF4" target="_blank" rel="noopener">Get All 8 Guides →</a>
+          <a class="shop-button" href="https://payhip.com/b/SwQF4" onclick="trackClick('payhip_bundle_click')" target="_blank" rel="noopener">Get All 8 Guides →</a>
         </div>
       </div>
     </div>
@@ -1208,7 +1237,7 @@ html {
       <h3>Get in Touch</h3>
       <p>We would be pleased to hear from you.</p>
 
-      <a href="mailto:hello@wonkypencil.co.uk?subject=HGV%20Driving%20Explained%20Enquiry"
+      <a href="mailto:hello@wonkypencil.co.uk?subject=HGV%20Driving%20Explained%20Enquiry" onclick="trackClick('contact_click')"
          style="display:inline-block; background:#07366b; color:white;
          padding:15px 30px; border-radius:8px; text-decoration:none;
          font-weight:bold; margin-top:15px;">
@@ -1229,5 +1258,34 @@ html {
     <p>Written by Mike Henderson and James Nichols</p>
     <p>&copy; 2026 HGV Driving Explained. All rights reserved.</p>
   </footer>
+
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <div><strong>Cookie settings</strong></div>
+  <div>We use analytics cookies to understand how visitors use this website and improve the experience.</div>
+  <button class="cookie-accept" onclick="acceptCookies()">Accept analytics</button>
+  <button class="cookie-reject" onclick="rejectCookies()">Essential only</button>
+</div>
+<script>
+function acceptCookies(){
+  localStorage.setItem('hgv_cookie_consent','accepted');
+  document.getElementById('cookie-banner').style.display='none';
+  if (typeof gtag === 'function') {
+    gtag('event','cookie_consent_accepted');
+  }
+}
+function rejectCookies(){
+  localStorage.setItem('hgv_cookie_consent','rejected');
+  document.getElementById('cookie-banner').style.display='none';
+}
+if(!localStorage.getItem('hgv_cookie_consent')){
+  document.getElementById('cookie-banner').style.display='block';
+}
+function trackClick(name){
+  if(typeof gtag === 'function'){
+    gtag('event', name);
+  }
+}
+</script>
+
 </body>
 </html>
